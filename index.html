@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro V2</title>
+    <link rel="shortcut icon" href="./assets/timer.svg" type="image/x-svg" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- JS -->
+    <script type="module" src="./script/main.js" defer></script>
+  </head>
+  <body>
+    <main id="app">
+      <div class="timer-wrapper">
+        <div id="timer">
+          <span id="minutes">00</span>
+          <span>:</span>
+          <span id="seconds">00</span>
+        </div>
+        <div id="timer-buttons">
+          <button class="ph ph-play-circle" data-action="playTimer"></button>
+          <button class="ph ph-stop-circle" data-action="stopTimer"></button>
+          <button
+            class="ph ph-plus-circle"
+            data-action="addFiveMinutes"
+          ></button>
+          <button
+            class="ph ph-minus-circle"
+            data-action="removeFiveMinutes"
+          ></button>
+        </div>
+      </div>
+      <div id="sound-buttons">
+        <button
+          id="buttonSoundForest"
+          class="ph ph-tree"
+          data-sound="soundForest"
+        ></button>
+        <button
+          id="buttonSoundRain"
+          class="ph ph-cloud-snow"
+          data-sound="soundRain"
+        ></button>
+        <button
+          id="buttonSoundCoffeeShop"
+          class="ph ph-coffee"
+          data-sound="soundCoffeeShop"
+        ></button>
+        <button
+          id="buttonSoundBonfire"
+          class="ph ph-flame"
+          data-sound="soundBonfire"
+        ></button>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #323238;
+  --bg-button: #e1e1e6;
+  --bg-button-secondary: #02799d;
+  --text-color-secondary: #ffffff;
+
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+#app {
+  display: flex;
+  align-items: center;
+  gap: 190px;
+}
+
+#timer span {
+  color: var(--text-color);
+  font-size: 12rem;
+  font-weight: 500;
+}
+
+#timer-buttons {
+  display: flex;
+  gap: 4rem;
+}
+
+#timer-buttons button,
+#sound-buttons button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: transform 0.3s;
+}
+
+#timer-buttons button {
+  font-size: 4.8rem;
+}
+
+#sound-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 3.2rem;
+}
+
+#sound-buttons button {
+  font-size: 6.4rem;
+  padding: 1.6rem;
+  background: var(--bg-button);
+  border-radius: 20px;
+}
+
+#sound-buttons button.sound-on {
+  background: var(--bg-button-secondary);
+  color: var(--text-color-secondary);
+}
+
+#timer-buttons button:hover,
+#sound-buttons button:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 800px) {
+  #app {
+    gap: 90px;
+  }
+}
+
+@media (max-width: 700px) {
+  #app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+  }
+}
